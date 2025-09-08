@@ -50,3 +50,9 @@
     line-height: 1.3;
   }
 }
+
+@layer base {
+  body {
+    @apply bg-brand-black;
+  }
+}
