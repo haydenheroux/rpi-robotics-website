@@ -3,12 +3,11 @@ import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
-    <div className="w-screen lg:w-6xl mx-auto px-6 flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
       <Nav />
-      <hr className="text-neutral-900 w-screen lg:w-2xl mx-auto" />
       {/* TODO Move this content to projects page */}
-      <h1 className="type-headline text-brand-red">Projects</h1>
-      <p className="type-subhead text-brand-white">
+      <h1>Projects</h1>
+      <p>
         Our club is structured into teams, each working on an ongoing project.
         Within each team, feel free to join a specific sub-team, such as
         mechanical, programming, electrical, or marketing!
