@@ -15,7 +15,7 @@ function App() {
           mechanical, programming, electrical, or marketing!
         </p>
         <div className="block h-8"></div>
-        <div className="flex flex-col gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           <ProjectCard name="Couch Bot" teamLead="Tag Ciccone" />
           <ProjectCard
             name="Paper Club"
