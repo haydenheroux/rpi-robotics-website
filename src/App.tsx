@@ -3,7 +3,7 @@ import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
-    <div className="w-screen lg:w-6xl mx-auto flex flex-col gap-4">
+    <div className="w-screen lg:w-6xl mx-auto px-6 flex flex-col gap-4">
       <Nav />
       <hr className="text-neutral-900 w-screen lg:w-2xl mx-auto" />
       {/* TODO Move this content to projects page */}
