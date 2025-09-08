@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* https://brand.rpi.edu/d/pfJS6BKVKBeq/brand-guidelines#/-/color */
+@theme {
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+  --color-brand-red: #d6001c;
+  --color-brand-silver: #e1edf5;
+  --color-brand-gray: #b9ccd8;
+  --color-brand-blue: #0081ce;
+  --color-brand-link-blue: #006eb0;
+  --color-brand-gold: #cdac38;
+}
+
+/* https://brand.rpi.edu/d/pfJS6BKVKBeq/brand-guidelines#/-/typography */
+@layer utility {
+  .type-headline {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .type-subhead {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .type-body {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .type-caption {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
