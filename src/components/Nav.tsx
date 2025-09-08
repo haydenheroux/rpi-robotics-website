@@ -10,7 +10,7 @@ function Nav() {
           <span className="type-nav text-neutral-700">Leadership</span>
           <span className="type-nav text-neutral-700">Contact</span>
         </div>
-        <span className="w-16 p-2 text-center type-nav-bold brand-button">
+        <span className="w-16 px-2 py-1 text-center type-nav-bold brand-button">
           Events
         </span>
       </div>
