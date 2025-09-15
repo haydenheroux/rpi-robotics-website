@@ -11,31 +11,31 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .type-nav {
+  .type-large {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
   }
 
-  .type-nav-bold {
+  .type-large-bold {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
   }
 
-  .type-nav-small {
+  .type-body {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -47,6 +47,6 @@
 
 @layer components {
   .brand-button {
-    @apply text-neutral-50 rounded-2xl bg-linear-to-t from-brand-dark to-brand drop-shadow-xl/25 drop-shadow-brand-dark;
+    @apply text-neutral-50 rounded-2xl bg-linear-to-t from-brand-dark to-brand hover:drop-shadow-xl/25 drop-shadow-brand-dark;
   }
 }

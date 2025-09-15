@@ -9,7 +9,7 @@ function App() {
       {/* TODO Move this content to projects page */}
       <div className="w-full sm:w-2xl sm:mx-auto px-8">
         <h1 className="type-title text-neutral-700">Projects</h1>
-        <p className="type-nav text-neutral-700">
+        <p className="type-body text-neutral-700">
           Our club is structured into teams, each working on an ongoing project.
           Within each team, feel free to join a specific sub-team, such as
           mechanical, programming, electrical, or marketing!
