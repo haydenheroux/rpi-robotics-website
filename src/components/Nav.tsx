@@ -11,7 +11,7 @@ function Nav() {
           <span className="type-large text-neutral-700">Calendar</span>
           <span className="type-large text-neutral-700">Contact</span>
         </div>
-        <span className="w-20 h-8 px-2 py-1 text-center type-large-bold brand-button">
+        <span className="w-20 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
           Events
         </span>
       </div>
