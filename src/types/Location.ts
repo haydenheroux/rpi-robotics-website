@@ -6,9 +6,11 @@ export default interface Location {
   room: string;
 }
 
-export const locationText = (location: Location) => `${location.building.code} ${location.room}`;
+export const locationText = (location: Location) =>
+  `${location.building.code} ${location.room}`;
 
-export const locationHover = (location: Location) => `${location.building.name} - Room ${location.room}`;
+export const locationHover = (location: Location) =>
+  `${location.building.name} - Room ${location.room}`;
 
 export const LOW = (room: string) => ({
   building: {
@@ -29,4 +31,3 @@ export const JEC = (room: string) => ({
 });
 
 export const JEC_3210 = JEC("3210");
-
