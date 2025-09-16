@@ -11,20 +11,22 @@ function Nav() {
           <span className="min-w-32 type-title text-neutral-700">
             RPI Robotics
           </span>
-          <div className="hidden md:flex px-2 overflow-x-scroll text-ellipsis flex-row gap-8 justify-start items-center">
+          <div className="hidden md:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             <span className="type-large text-neutral-700 link-hover">Projects</span>
             <span className="type-large text-neutral-700 link-hover">Leadership</span>
-            <span className="type-large text-neutral-700">Calendar</span>
-            <span className="type-large text-neutral-700">Contact</span>
+            <span className="type-large text-neutral-700 link-hover">Calendar</span>
+            <span className="type-large text-neutral-700 link-hover">Contact</span>
           </div>
           <span className="hidden md:flex w-20 h-9 px-2 py-1 justify-center items-center type-large-bold brand-button">
             Events
           </span>
-          <MdMenu
-            size={24}
-            className="md:hidden text-neutral-700 link-hover"
-            onClick={() => setShowNav(!showNav)}
-          />
+          <div className="link-hover">
+            <MdMenu
+              size={24}
+              className="md:hidden text-neutral-700"
+              onClick={() => setShowNav(!showNav)}
+            />
+          </div>
         </div>
       </nav>
       {showNav && (
@@ -32,8 +34,8 @@ function Nav() {
           <div className="px-2 overflow-x-scroll text-ellipsis flex flex-col gap-4 justify-start items-center">
             <span className="type-large text-neutral-700 link-hover">Projects</span>
             <span className="type-large text-neutral-700 link-hover">Leadership</span>
-            <span className="type-large text-neutral-700">Calendar</span>
-            <span className="type-large text-neutral-700">Contact</span>
+            <span className="type-large text-neutral-700 link-hover">Calendar</span>
+            <span className="type-large text-neutral-700 link-hover">Contact</span>
             <span className="w-32 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
               Events
             </span>
