@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #d0464d;
+  --color-brand-dark: #a13136;
+}
+
+@layer utility {
+  .type-title {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .type-large {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+  }
+
+  .type-large-bold {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+  }
+
+  .type-body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-50;
+  }
+}
+
+@layer components {
+  .brand-button {
+    @apply text-neutral-50 rounded-2xl bg-linear-to-t from-brand-dark to-brand hover:drop-shadow-xl/25 drop-shadow-brand-dark;
+  }
+}
