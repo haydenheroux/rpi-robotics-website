@@ -6,7 +6,7 @@ function Nav() {
 
   return (
     <>
-      <nav className="w-screen h-16 py-4 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
+      <nav className={`w-screen h-16 py-4 px-6 bg-neutral-50 ${!showNav ? "drop-shadow-sm/25 drop-shadow-neutral-500" : "z-10 relative"}`}>
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
           <span className="min-w-32 type-title text-neutral-700">
             RPI Robotics
@@ -28,7 +28,7 @@ function Nav() {
         </div>
       </nav>
       {showNav && (
-        <nav className="md:hidden w-screen py-4 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
+        <nav className="md:hidden w-screen pb-4 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
           <div className="px-2 overflow-x-scroll text-ellipsis flex flex-col gap-4 justify-start items-center">
             <span className="type-large text-neutral-700">Projects</span>
             <span className="type-large text-neutral-700">Leadership</span>
