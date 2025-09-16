@@ -12,8 +12,8 @@ function Nav() {
             RPI Robotics
           </span>
           <div className="hidden md:flex px-2 overflow-x-scroll text-ellipsis flex-row gap-8 justify-start items-center">
-            <span className="type-large text-neutral-700">Projects</span>
-            <span className="type-large text-neutral-700">Leadership</span>
+            <span className="type-large text-neutral-700 link-hover">Projects</span>
+            <span className="type-large text-neutral-700 link-hover">Leadership</span>
             <span className="type-large text-neutral-700">Calendar</span>
             <span className="type-large text-neutral-700">Contact</span>
           </div>
@@ -22,7 +22,7 @@ function Nav() {
           </span>
           <MdMenu
             size={24}
-            className="md:hidden text-neutral-700"
+            className="md:hidden text-neutral-700 link-hover"
             onClick={() => setShowNav(!showNav)}
           />
         </div>
@@ -30,8 +30,8 @@ function Nav() {
       {showNav && (
         <nav className="md:hidden w-screen pb-4 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
           <div className="px-2 overflow-x-scroll text-ellipsis flex flex-col gap-4 justify-start items-center">
-            <span className="type-large text-neutral-700">Projects</span>
-            <span className="type-large text-neutral-700">Leadership</span>
+            <span className="type-large text-neutral-700 link-hover">Projects</span>
+            <span className="type-large text-neutral-700 link-hover">Leadership</span>
             <span className="type-large text-neutral-700">Calendar</span>
             <span className="type-large text-neutral-700">Contact</span>
             <span className="w-32 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
