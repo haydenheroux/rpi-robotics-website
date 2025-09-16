@@ -15,22 +15,18 @@ interface InfoRowProps<Type> {
 }
 
 function InfoRow<Type>({ Icon, items, text, hover }: InfoRowProps<Type>) {
-  return (
+  return items.map((item, index) => (
     <div className="flex flex-row gap-1 items-center">
-      <Icon size={16} className="h-full text-neutral-700" />
-      <div className="flex flex-row gap-1 items-center">
-        {items.map((item, index) => (
-          <span
-            key={index}
-            title={hover(item)}
-            className="type-body text-neutral-700 link-dotted"
-          >
-            {text(item)}
-          </span>
-        ))}
-      </div>
+      <Icon size={16} className="text-neutral-700" />
+      <span
+        key={index}
+        title={hover(item)}
+        className="type-body text-neutral-700 link-dotted"
+      >
+        {text(item)}
+      </span>
     </div>
-  );
+  ));
 }
 
 export interface ProjectCardProps {
