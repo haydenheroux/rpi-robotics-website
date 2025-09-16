@@ -54,16 +54,24 @@
     @apply scale-105;
   }
 
+  .brand-button:active {
+    @apply scale-100 inset-shadow-sm inset-shadow-brand-dark;
+  }
+
   .link-hover::before {
     content: "";
     @apply w-full h-full scale-100 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-neutral-200 -z-10 opacity-0 transition-all duration-150 ease-in-out;
   }
 
   .link-hover {
-    @apply relative;
+    @apply relative cursor-pointer;
   }
 
   .link-hover:hover::before {
     @apply opacity-100 scale-130;
+  }
+
+  .link-hover:active::before {
+    @apply scale-125 inset-shadow-sm inset-shadow-neutral-300;
   }
 }
