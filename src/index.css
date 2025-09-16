@@ -50,3 +50,9 @@
     @apply text-neutral-50 rounded-2xl bg-linear-to-t from-brand-dark to-brand hover:drop-shadow-xl/25 drop-shadow-brand-dark;
   }
 }
+
+@layer components {
+  .link-dotted {
+    @apply underline underline-offset-[1.5px] decoration-dotted decoration-1 decoration-neutral-700 cursor-pointer;
+  }
+}
