@@ -75,3 +75,9 @@
     @apply scale-125 inset-shadow-sm inset-shadow-neutral-300;
   }
 }
+
+@layer components {
+  .link-dotted {
+    @apply underline underline-offset-[1.5px] decoration-dotted decoration-1 decoration-neutral-700 cursor-pointer;
+  }
+}

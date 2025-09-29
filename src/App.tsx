@@ -1,4 +1,5 @@
 import ProjectCard from "./components/ProjectCard";
+import { JEC_3210, LOW_8214 } from "./types/Location";
 import Nav from "./components/Nav";
 
 function App() {
@@ -16,10 +17,18 @@ function App() {
         </p>
         <div className="block h-8"></div>
         <div className="grid gap-8">
-          <ProjectCard name="Couch Bot" teamLead="Tag Ciccone" />
+          <ProjectCard
+            name="Couch Bot"
+            people={[{ name: "Tag Ciccone", email: "ciccot@rpi.edu" }]}
+            times={[
+              { day: "Wednesday", start: "4:00pm", end: "6:00pm" },
+              { day: "Sunday", start: "12:00pm", end: "2:00pm" },
+            ]}
+            locations={[LOW_8214]}
+          />
           <ProjectCard
             name="Paper Club"
-            teamLead="Kateri Ngo"
+            people={[{ name: "Kateri Ngo", email: "ngok2@rpi.edu" }]}
             description={[
               "Individually read through the paper",
               "Meetup to discuss the paper, ideas, knowledge gaps, and inspirations",
@@ -29,7 +38,7 @@ function App() {
           />
           <ProjectCard
             name="Robotic Art Installation"
-            teamLead="Jayden Smith"
+            people={[{ name: "Jayden Smith" }]}
             description={[
               "Four 3-DOF robot arms drawing on a spinning canvas",
               "A project with the synergy between art and mechatronics at its core",
@@ -39,7 +48,9 @@ function App() {
           />
           <ProjectCard
             name="Combat Robotics"
-            teamLead="Cyle Rush"
+            people={[{ name: "Cyle Rush", email: "rushc2@rpi.edu" }]}
+            times={[{ day: "Friday", start: "4:30pm", end: "6:30pm" }]}
+            locations={[JEC_3210]}
             description={[
               "Fall Semester - Create 8 teams",
               "Fall Semester - Each team builds a 1 pound robot in 3 months",
@@ -51,16 +62,28 @@ function App() {
           />
           <ProjectCard
             name="Drone Project"
-            teamLead="Jason Zhang & Gavin Lesko"
+            people={[
+              { name: "Jason Zhang", email: "zhangy96@rpi.edu" },
+              { name: "Gavin Lesko", email: "gavinl@rpi.edu" },
+            ]}
+            times={[{ day: "Monday", start: "7:00pm" }]}
+            locations={[LOW_8214]}
             description={[
               "Gesture Controlled Drone - Recognize hand gestures and translate them into flight commands",
               "Custom Hardware + Computer Vision Integration - Drone will be built from scratch powered by the OpenCV library",
             ]}
           />
-          <ProjectCard name="IGVC" teamLead="Zane Brotherton" />
+          <ProjectCard
+            name="IGVC"
+            people={[{ name: "Zane Brotherton", email: "brothz@rpi.edu" }]}
+            times={[{ day: "Sunday", start: "3:00pm" }]}
+            locations={[LOW_8214]}
+          />
           <ProjectCard
             name="Audio-Animatronic"
-            teamLead="Sydney Simmons"
+            people={[{ name: "Sydney Simmons", email: "simmos6@rpi.edu" }]}
+            times={[{ day: "Sunday", start: "4:00pm", end: "5:00pm" }]}
+            locations={[JEC_3210]}
             description={[
               "Build an animatronic with movements synchronized with sound, posing as a new avatar for robotics club!",
               "Uno R3, PCA9685, Micro Servos (9g), sound module",
