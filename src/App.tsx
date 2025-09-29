@@ -1,9 +1,9 @@
-import Nav from "./components/Nav";
 import ProjectCard from "./components/ProjectCard";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div>
+    <>
       <Nav />
       <div className="block h-8"></div>
       {/* TODO Move this content to projects page */}
@@ -71,7 +71,7 @@ function App() {
         </div>
         <div className="block h-16"></div>
       </div>
-    </div>
+    </>
   );
 }
 
