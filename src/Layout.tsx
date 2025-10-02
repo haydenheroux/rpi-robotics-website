@@ -6,8 +6,7 @@ function Layout() {
     <>
       <Nav />
       <div className="block h-8"></div>
-      {/* TODO Move this content to projects page */}
-      <div className="w-full sm:w-2xl sm:mx-auto px-8">
+      <div className="w-full sm:w-2xl lg:w-4xl sm:mx-auto px-8">
         <Outlet />
         <div className="block h-16"></div>
       </div>
