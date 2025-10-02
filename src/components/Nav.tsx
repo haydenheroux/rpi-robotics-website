@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 function Nav() {
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -13,25 +13,25 @@ function Nav() {
         className={`w-screen h-16 py-4 px-8 bg-neutral-50 ${!showNav ? "drop-shadow-sm/25 drop-shadow-neutral-500" : "relative z-10"}`}
       >
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
-          <NavLink to="/">
+          <Link to="/">
             <span className="min-w-32 type-title text-neutral-700 link-hover">
               RPI Robotics
             </span>
-          </NavLink>
+          </Link>
           <div className="hidden md:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             {links.map((title) => (
-              <NavLink to={"/" + title.toLowerCase()} end>
+              <Link to={"/" + title.toLowerCase()}>
                 <span className="type-large text-neutral-700 link-hover">
                   {title}
                 </span>
-              </NavLink>
+              </Link>
             ))}
           </div>
-          <NavLink to="/events" end>
+          <Link to="/events">
             <span className="hidden md:flex w-20 h-9 px-2 py-1 justify-center items-center type-large-bold brand-button">
               Events
             </span>
-          </NavLink>
+          </Link>
           <div className="md:hidden link-hover">
             <MdMenu
               size={24}
@@ -45,13 +45,17 @@ function Nav() {
         <nav className="md:hidden w-screen pt-4 pb-8 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
           <div className="flex flex-col gap-4 justify-start items-center">
             {links.map((title) => (
-              <span className="type-large text-neutral-700 link-hover">
-                {title}
-              </span>
+              <Link to={"/" + title.toLowerCase()}>
+                <span className="type-large text-neutral-700 link-hover">
+                  {title}
+                </span>
+              </Link>
             ))}
-            <span className="w-32 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
-              Events
-            </span>
+            <Link to="/events">
+              <span className="w-32 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
+                Events
+              </span>
+            </Link>
           </div>
         </nav>
       )}
