@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 function Layout() {
   return (
@@ -8,8 +9,8 @@ function Layout() {
       <div className="block h-8"></div>
       <div className="w-full sm:w-2xl lg:w-4xl sm:mx-auto px-8">
         <Outlet />
-        <div className="block h-16"></div>
       </div>
+      <Footer />
     </>
   );
 }
