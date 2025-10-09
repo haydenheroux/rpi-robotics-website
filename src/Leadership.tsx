@@ -5,6 +5,7 @@ function Leadership() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       <PersonCard
         name="Jason Zhang"
+        email="email"
         position="President"
         projects={["Drone Project"]}
       />

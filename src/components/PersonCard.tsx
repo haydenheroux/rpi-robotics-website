@@ -8,8 +8,6 @@ import BottomToast from "./BottomToast";
 function PersonCard({ name, email, discord, position, projects }: Person) {
   const [showCopied, setShowCopied] = useState<boolean>(false);
 
-  const hasSocials = email || discord;
-
   const copy = async (text: string) => {
     await navigator.clipboard.writeText(text);
     setShowCopied(true);
@@ -18,36 +16,11 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
   return (
     <>
       <Card>
-        <div className="flex flex-row gap-4">
-          <div className="flex flex-col items-center justify-center">
-            <div className="min-w-16 min-h-16 flex items-center justify-center">
-              <MdPerson
-                size={hasSocials ? 48 : 64}
-                className="text-neutral-700"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-1">
-              {email && (
-                <a
-                  className="link-hover p-0.5 text-neutral-700"
-                  href={`mailto:${email}`}
-                  title={`mailto:${email}`}
-                >
-                  <MdEmail size={16} />
-                </a>
-              )}
-              {discord && (
-                <a
-                  className="link-hover p-0.5 text-neutral-700"
-                  title={discord}
-                  onClick={() => copy(discord)}
-                >
-                  <FaDiscord size={16} />
-                </a>
-              )}
-            </div>
+        <div className="flex flex-col gap-4">
+          <div className="w-48 h-48 flex items-center justify-center rounded-2xl mx-auto drop-shadow-sm/25 drop-shadow-neutral-500">
+            <MdPerson size={192} className="text-neutral-700" />
           </div>
-          <div>
+          <div className="mx-auto text-center">
             <h2 className="type-title text-neutral-700 mb-1">{name}</h2>
             {position && (
               <p className="type-large text-neutral-700">
@@ -61,6 +34,26 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
                 </span>{" "}
                 {projects.join(", ")}
               </p>
+            )}
+          </div>
+          <div className="mx-auto flex gap-1">
+            {email && (
+              <a
+                className="link-hover p-0.5 text-neutral-700"
+                href={`mailto:${email}`}
+                title={`mailto:${email}`}
+              >
+                <MdEmail size={24} />
+              </a>
+            )}
+            {discord && (
+              <a
+                className="link-hover p-0.5 text-neutral-700"
+                title={discord}
+                onClick={() => copy(discord)}
+              >
+                <FaDiscord size={24} />
+              </a>
             )}
           </div>
         </div>
