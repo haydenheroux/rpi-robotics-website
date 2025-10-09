@@ -10,8 +10,8 @@ function Projects() {
         Within each team, feel free to join a specific sub-team, such as
         mechanical, programming, electrical, or marketing!
       </p>
-      <div className="block h-8"></div>
-      <div className="grid gap-8">
+      <div className="block h-12"></div>
+      <div className="grid gap-12">
         <ProjectCard
           name="Couch Bot"
           people={[{ name: "Tag Ciccone", email: "ciccot@rpi.edu" }]}
