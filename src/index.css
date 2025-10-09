@@ -74,6 +74,14 @@
   .link-hover:active::before {
     @apply scale-125 inset-shadow-sm inset-shadow-neutral-300;
   }
+
+	.link-fade {
+		@apply text-neutral-700;
+	}
+
+	.link-fade:hover {
+		@apply text-neutral-500;
+	}
 }
 
 @layer components {

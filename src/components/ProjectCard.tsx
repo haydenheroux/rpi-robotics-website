@@ -6,6 +6,7 @@ import { locationHover, locationText } from "../types/Location";
 import type MeetingTime from "../types/MeetingTime";
 import { meetingTimeHover, meetingTimeText } from "../types/MeetingTime";
 import { personHover, personText } from "../types/Person";
+import Card from "./Card";
 
 interface InfoRowProps<Type> {
   Icon: IconType;
@@ -47,7 +48,7 @@ function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="p-6 rounded-2xl bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
+    <Card>
       <h2 className="type-large-bold text-neutral-700 mb-0.5">{name}</h2>
       {(people || times || locations) && (
         <div className="mb-2">
@@ -93,7 +94,7 @@ function ProjectCard({
           className="mt-4 rounded-2xl drop-shadow-sm/25 drop-shadow-neutral-500"
         />
       )}
-    </div>
+    </Card>
   );
 }
 
