@@ -10,7 +10,7 @@ function Nav() {
   return (
     <>
       <nav
-        className={`w-screen h-16 py-4 px-8 bg-neutral-50 ${!showNav ? "drop-shadow-sm/25 drop-shadow-neutral-500" : "relative z-10"}`}
+        className={`w-screen min-h-16 py-4 px-8 bg-neutral-50 ${!showNav ? "drop-shadow-sm/25 drop-shadow-neutral-500" : "relative z-10"}`}
       >
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
           <Link to="/">
