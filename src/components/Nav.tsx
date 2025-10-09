@@ -28,7 +28,7 @@ function Nav() {
             ))}
           </div>
           <Link to="/events">
-            <span className="hidden md:flex w-20 h-9 px-2 py-1 justify-center items-center type-large-bold brand-button">
+            <span className="hidden md:flex px-4 py-2 justify-center items-center type-large-bold brand-button">
               Events
             </span>
           </Link>
@@ -52,7 +52,7 @@ function Nav() {
               </Link>
             ))}
             <Link to="/events">
-              <span className="w-32 h-9 px-2 py-1 flex justify-center items-center type-large-bold brand-button">
+              <span className="px-4 py-2 flex justify-center items-center type-large-bold brand-button">
                 Events
               </span>
             </Link>
