@@ -9,3 +9,5 @@ export default interface Person {
 export const personText = (person: Person) => person.name;
 
 export const personHover = (person: Person) => person.email ?? person.name;
+
+export const personLink = (person: Person) => person.email ? `mailto:${person.email}` : "";

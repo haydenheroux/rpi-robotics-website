@@ -24,7 +24,7 @@ function Projects() {
         <ProjectCard
           name="Paper Club"
           people={[{ name: "Kateri Ngo", email: "ngok2@rpi.edu" }]}
-          description={[
+          bullets={[
             "Individually read through the paper",
             "Meetup to discuss the paper, ideas, knowledge gaps, and inspirations",
             "Increase our academic literacy because papers are intimidating",
@@ -34,19 +34,20 @@ function Projects() {
         <ProjectCard
           name="Robotic Art Installation"
           people={[{ name: "Jayden Smith" }]}
-          description={[
+          bullets={[
             "Four 3-DOF robot arms drawing on a spinning canvas",
             "A project with the synergy between art and mechatronics at its core",
             "Lots of opportunities to learn and experiment",
           ]}
-          image="./rai.png"
+          images={["./rai.png"]}
+          right
         />
         <ProjectCard
           name="Combat Robotics"
           people={[{ name: "Cyle Rush", email: "rushc2@rpi.edu" }]}
           times={[{ day: "Friday", start: "4:30pm", end: "6:30pm" }]}
           locations={[JEC_3210]}
-          description={[
+          bullets={[
             "Fall Semester - Create 8 teams",
             "Fall Semester - Each team builds a 1 pound robot in 3 months",
             "Fall Semester - Robot killing tournament",
@@ -63,7 +64,7 @@ function Projects() {
           ]}
           times={[{ day: "Monday", start: "7:00pm" }]}
           locations={[LOW_8214]}
-          description={[
+          bullets={[
             "Gesture Controlled Drone - Recognize hand gestures and translate them into flight commands",
             "Custom Hardware + Computer Vision Integration - Drone will be built from scratch powered by the OpenCV library",
           ]}
@@ -79,11 +80,10 @@ function Projects() {
           people={[{ name: "Sydney Simmons", email: "simmos6@rpi.edu" }]}
           times={[{ day: "Sunday", start: "4:00pm", end: "5:00pm" }]}
           locations={[JEC_3210]}
-          description={[
-            "Build an animatronic with movements synchronized with sound, posing as a new avatar for robotics club!",
-            "Uno R3, PCA9685, Micro Servos (9g), sound module",
-            "Sub-teams: Concept design, mechanical, electrical, programming",
-            "Any questions (or ideas!) PLEASE DM Sydney on Discord!",
+          paragraphs={[
+            "Build an animatronic with movements synchronized with sound, posing as a new character representing robotics club!",
+            "Sub-teams: Concept design, mechanical, electrical, and programming.",
+            "Any questions DM Sydney on Discord or send her an email (simmos6@rpi.edu)."
           ]}
         />
       </div>

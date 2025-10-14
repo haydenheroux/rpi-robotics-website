@@ -87,6 +87,10 @@
     @apply underline underline-offset-[1.5px] decoration-dotted decoration-1 decoration-neutral-700 cursor-pointer;
   }
 
+  .link-dotted:hover {
+    @apply decoration-solid;
+  }
+
   .card {
     @apply rounded-2xl drop-shadow-sm/25 drop-shadow-neutral-500;
   }
