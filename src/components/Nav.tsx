@@ -1,6 +1,18 @@
 import { useState } from "react";
+import { FaDiscord } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-router";
+
+function DiscordButton() {
+  return (
+    <a
+      href="https://discord.gg/DPWMz5BqZP"
+      className="flex px-4 py-2 justify-center items-center type-large-bold brand-button"
+    >
+      Join on <FaDiscord className="ml-1.5" size={24} />
+    </a>
+  );
+}
 
 function Nav() {
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -27,11 +39,9 @@ function Nav() {
               </Link>
             ))}
           </div>
-          <Link to="/events">
-            <span className="hidden md:flex px-4 py-2 justify-center items-center type-large-bold brand-button">
-              Events
-            </span>
-          </Link>
+          <div className="hidden md:block">
+            <DiscordButton />
+          </div>
           <div className="md:hidden link-hover">
             <MdMenu
               size={24}
@@ -51,11 +61,7 @@ function Nav() {
                 </span>
               </Link>
             ))}
-            <Link to="/events">
-              <span className="px-4 py-2 flex justify-center items-center type-large-bold brand-button">
-                Events
-              </span>
-            </Link>
+            <DiscordButton />
           </div>
         </nav>
       )}
