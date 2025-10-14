@@ -75,17 +75,19 @@
     @apply scale-125 inset-shadow-sm inset-shadow-neutral-300;
   }
 
-	.link-fade {
-		@apply text-neutral-700;
-	}
+  .link-fade {
+    @apply text-neutral-700;
+  }
 
-	.link-fade:hover {
-		@apply text-neutral-500;
-	}
-}
+  .link-fade:hover {
+    @apply text-neutral-500;
+  }
 
-@layer components {
   .link-dotted {
     @apply underline underline-offset-[1.5px] decoration-dotted decoration-1 decoration-neutral-700 cursor-pointer;
+  }
+
+  .card {
+    @apply rounded-2xl drop-shadow-sm/25 drop-shadow-neutral-500;
   }
 }

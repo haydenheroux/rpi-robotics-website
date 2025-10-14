@@ -17,7 +17,7 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
     <>
       <Card>
         <div className="flex flex-col gap-4">
-          <div className="w-48 h-48 flex items-center justify-center rounded-2xl mx-auto drop-shadow-sm/25 drop-shadow-neutral-500">
+          <div className="w-48 h-48 flex items-center justify-center mx-auto card">
             <MdPerson size={192} className="text-neutral-700" />
           </div>
           <div className="mx-auto text-center">

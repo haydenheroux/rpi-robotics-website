@@ -10,7 +10,7 @@ function Nav() {
   return (
     <>
       <nav
-        className={`w-screen min-h-16 py-4 px-8 bg-neutral-50 ${!showNav ? "drop-shadow-sm/25 drop-shadow-neutral-500" : "relative z-10"}`}
+        className={`w-screen min-h-16 py-4 px-8 bg-neutral-50 ${!showNav ? "card rounded-[0]" : "relative z-10"}`}
       >
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
           <Link to="/">
@@ -42,7 +42,7 @@ function Nav() {
         </div>
       </nav>
       {showNav && (
-        <nav className="md:hidden w-screen pt-4 pb-8 px-6 bg-neutral-50 drop-shadow-sm/25 drop-shadow-neutral-500">
+        <nav className="md:hidden w-screen pt-4 pb-8 px-6 bg-neutral-50 card rounded-[0]">
           <div className="flex flex-col gap-4 justify-start items-center">
             {links.map((title) => (
               <Link to={"/" + title.toLowerCase()}>

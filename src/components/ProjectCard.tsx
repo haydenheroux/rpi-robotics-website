@@ -91,7 +91,7 @@ function ProjectCard({
         <img
           src={image}
           alt={`${name} project image`}
-          className="mt-4 rounded-2xl drop-shadow-sm/25 drop-shadow-neutral-500"
+          className="mt-4 card"
         />
       )}
     </Card>
