@@ -94,7 +94,7 @@ function ProjectCard({
   right = false,
 }: ProjectCardProps) {
   return (
-    <div className={`grid ${images ? "grid-cols-2" : "grid-cols-1"} gap-6`}>
+    <div className={`grid ${images ? "grid-cols-2" : "grid-cols-1"} gap-8`}>
       {!right && images && <ProjectImages images={images} />}
       <div>
         <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
@@ -132,7 +132,7 @@ function ProjectCard({
         {paragraphs && (
           <div>
             {paragraphs.map((text, index) => (
-              <p key={index} className="mb-2 type-body text-neutral-700">
+              <p key={index} className="mb-1 type-body text-neutral-700">
                 {text}
               </p>
             ))}
@@ -141,7 +141,7 @@ function ProjectCard({
         {bullets && (
           <ul className="block list-disc list-inside">
             {bullets.map((text, index) => (
-              <li key={index} className="mb-2 type-body text-neutral-700">
+              <li key={index} className="type-body text-neutral-700">
                 {text}
               </li>
             ))}

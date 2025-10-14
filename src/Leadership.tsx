@@ -10,6 +10,7 @@ function Leadership() {
       />
       <PersonCard
         name="Sydney Simmons"
+        email="simmos6@rpi.edu"
         position="Vice President"
         projects={["Audio-Animatronic"]}
       />
