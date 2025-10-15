@@ -6,6 +6,7 @@ import { locationHover, locationLink, locationText } from "../types/Location";
 import type MeetingTime from "../types/MeetingTime";
 import { meetingTimeHover, meetingTimeText } from "../types/MeetingTime";
 import { personHover, personLink, personText } from "../types/Person";
+import type Image from "../types/Image";
 
 interface InfoRowProps<Type> {
   Icon: IconType;
@@ -41,18 +42,27 @@ function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   ));
 }
 
-function ProjectImages({ images }: { images: string[] }) {
+function ProjectImage({ image: { url, caption } }: { image: Image }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <img key={url} src={url} className="card" />
+      {caption && <p className="text-center text-neutral-700 type-body">{caption}</p>}
+    </div>
+  );
+}
+
+function ProjectImages({ images }: { images: Image[] }) {
   const shownImages = images.slice(0, 3);
 
   if (shownImages.length == 1) {
-    return <img key={shownImages[0]} src={shownImages[0]} className="card" />;
+    return <ProjectImage image={shownImages[0]} />;
   }
 
   if (shownImages.length == 2) {
     return (
-      <div className="flex flex-col gap-4">
-        <img key={shownImages[0]} src={shownImages[0]} className="card" />
-        <img key={shownImages[1]} src={shownImages[1]} className="card" />
+      <div className="flex flex-col gap-6">
+        <ProjectImage image={shownImages[0]} />
+        <ProjectImage image={shownImages[1]} />
       </div>
     );
   }
@@ -60,10 +70,10 @@ function ProjectImages({ images }: { images: string[] }) {
   if (shownImages.length == 3) {
     return (
       <div className="flex flex-col gap-4">
-        <img key={shownImages[0]} src={shownImages[0]} className="card" />
+        <ProjectImage image={shownImages[0]} />
         <div className="grid lg:grid-cols-2 gap-4">
-          <img key={shownImages[1]} src={shownImages[1]} className="card" />
-          <img key={shownImages[2]} src={shownImages[2]} className="card" />
+          <ProjectImage image={shownImages[1]} />
+          <ProjectImage image={shownImages[2]} />
         </div>
       </div>
     );
@@ -79,7 +89,7 @@ export interface ProjectCardProps {
   locations?: Location[];
   paragraphs?: string[];
   bullets?: string[];
-  images?: string[];
+  images?: Image[];
   right?: boolean;
 }
 

@@ -39,7 +39,7 @@ function Projects() {
             "A project with the synergy between art and mechatronics at its core",
             "Lots of opportunities to learn and experiment",
           ]}
-          images={["./rai.png"]}
+          images={[{ url: "./rai.png" }]}
           right
         />
         <ProjectCard
@@ -83,7 +83,11 @@ function Projects() {
           paragraphs={[
             "Build an animatronic with movements synchronized with sound, posing as a new character representing robotics club!",
             "Sub-teams: Concept design, mechanical, electrical, and programming.",
-            "Any questions DM Sydney on Discord or send her an email (simmos6@rpi.edu)."
+            "Any questions DM Sydney on Discord or send her an email (simmos6@rpi.edu).",
+          ]}
+          images={[
+            { url: "./aa_concept_1.png", caption: "By Jasmin Chen" },
+            { url: "./aa_concept_2.jpg", caption: "By Aarushi Kumar" },
           ]}
         />
       </div>
