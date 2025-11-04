@@ -46,40 +46,22 @@ function ProjectImage({ image: { url, caption } }: { image: Image }) {
   return (
     <div className="flex flex-col gap-2">
       <img key={url} src={url} className="card" />
-      {caption && <p className="text-center text-neutral-700 type-body">{caption}</p>}
+      {caption && (
+        <p className="text-center text-neutral-700 type-body">{caption}</p>
+      )}
     </div>
   );
 }
 
+// TODO Make carousel
 function ProjectImages({ images }: { images: Image[] }) {
-  const shownImages = images.slice(0, 3);
-
-  if (shownImages.length == 1) {
-    return <ProjectImage image={shownImages[0]} />;
-  }
-
-  if (shownImages.length == 2) {
-    return (
-      <div className="flex flex-col gap-6">
-        <ProjectImage image={shownImages[0]} />
-        <ProjectImage image={shownImages[1]} />
-      </div>
-    );
-  }
-
-  if (shownImages.length == 3) {
-    return (
-      <div className="flex flex-col gap-4">
-        <ProjectImage image={shownImages[0]} />
-        <div className="grid lg:grid-cols-2 gap-4">
-          <ProjectImage image={shownImages[1]} />
-          <ProjectImage image={shownImages[2]} />
-        </div>
-      </div>
-    );
-  }
-
-  return <></>;
+  return (
+    <div className="flex flex-row gap-6">
+      {images.map((image) => (
+        <ProjectImage image={image} />
+      ))}
+    </div>
+  );
 }
 
 export interface ProjectCardProps {
@@ -90,7 +72,6 @@ export interface ProjectCardProps {
   paragraphs?: string[];
   bullets?: string[];
   images?: Image[];
-  right?: boolean;
 }
 
 function ProjectCard({
@@ -101,44 +82,44 @@ function ProjectCard({
   paragraphs,
   bullets,
   images,
-  right = false,
 }: ProjectCardProps) {
   return (
-    <div className={`grid ${images ? "grid-cols-2" : "grid-cols-1"} gap-8`}>
-      {!right && images && <ProjectImages images={images} />}
-      <div>
-        <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
-        {(people || times || locations) && (
-          <div className="mb-2">
-            {people && (
-              <InfoRow
-                Icon={MdPerson}
-                items={people}
-                text={personText}
-                hover={personHover}
-                link={personLink}
-              />
-            )}
-            {times && (
-              <InfoRow
-                Icon={MdCalendarMonth}
-                items={times}
-                text={meetingTimeText}
-                hover={meetingTimeHover}
-                link={() => ""}
-              />
-            )}
-            {locations && (
-              <InfoRow
-                Icon={MdLocationCity}
-                items={locations}
-                text={locationText}
-                hover={locationHover}
-                link={locationLink}
-              />
-            )}
-          </div>
-        )}
+    <div className={`flex flex-col gap-8 bg-neutral-50 card p-8`}>
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div>
+          <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
+          {(people || times || locations) && (
+            <div className="mb-2">
+              {people && (
+                <InfoRow
+                  Icon={MdPerson}
+                  items={people}
+                  text={personText}
+                  hover={personHover}
+                  link={personLink}
+                />
+              )}
+              {times && (
+                <InfoRow
+                  Icon={MdCalendarMonth}
+                  items={times}
+                  text={meetingTimeText}
+                  hover={meetingTimeHover}
+                  link={() => ""}
+                />
+              )}
+              {locations && (
+                <InfoRow
+                  Icon={MdLocationCity}
+                  items={locations}
+                  text={locationText}
+                  hover={locationHover}
+                  link={locationLink}
+                />
+              )}
+            </div>
+          )}
+        </div>
         {paragraphs && (
           <div>
             {paragraphs.map((text, index) => (
@@ -158,7 +139,7 @@ function ProjectCard({
           </ul>
         )}
       </div>
-      {right && images && <ProjectImages images={images} />}
+      {images && <ProjectImages images={images} />}
     </div>
   );
 }
