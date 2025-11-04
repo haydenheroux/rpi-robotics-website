@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaDiscord } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-router";
+import ThemeToggle from "./ThemeToggle";
 
 function DiscordButton() {
   return (
@@ -39,8 +40,9 @@ function Nav() {
               </Link>
             ))}
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex gap-4 items-center justify-center">
             <DiscordButton />
+            <ThemeToggle />
           </div>
           <div className="md:hidden link-hover">
             <MdMenu
@@ -62,6 +64,7 @@ function Nav() {
               </Link>
             ))}
             <DiscordButton />
+            <ThemeToggle />
           </div>
         </nav>
       )}
