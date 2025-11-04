@@ -19,10 +19,10 @@ interface InfoRowProps<Type> {
 function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   return items.map((item, index) => (
     <div className="flex flex-row gap-1 items-center">
-      <Icon size={16} className="text-neutral-700" />
+      <Icon size={16} className="text-standard" />
       {link(item) && (
         <a
-          className="type-large-bold link-dotted text-neutral-700"
+          className="type-large-bold link-dotted text-standard"
           title={hover(item)}
           href={link(item)}
         >
@@ -33,7 +33,7 @@ function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
         <span
           key={index}
           title={hover(item)}
-          className="type-large-bold link-dotted text-neutral-700"
+          className="type-large-bold link-dotted text-standard"
         >
           {text(item)}
         </span>
@@ -46,7 +46,7 @@ function ProjectImage({ image: { url, caption } }: { image: Image }) {
   return (
     <div className="flex flex-col gap-2">
       <img key={url} src={url} className="card" />
-      {caption && <p className="text-center text-neutral-700 type-body">{caption}</p>}
+      {caption && <p className="text-center text-standard type-body">{caption}</p>}
     </div>
   );
 }
@@ -107,7 +107,7 @@ function ProjectCard({
     <div className={`grid ${images ? "grid-cols-2" : "grid-cols-1"} gap-8`}>
       {!right && images && <ProjectImages images={images} />}
       <div>
-        <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
+        <h2 className="type-title text-standard mb-0.5">{name}</h2>
         {(people || times || locations) && (
           <div className="mb-2">
             {people && (
@@ -142,7 +142,7 @@ function ProjectCard({
         {paragraphs && (
           <div>
             {paragraphs.map((text, index) => (
-              <p key={index} className="mb-1 type-body text-neutral-700">
+              <p key={index} className="mb-1 type-body text-standard">
                 {text}
               </p>
             ))}
@@ -151,7 +151,7 @@ function ProjectCard({
         {bullets && (
           <ul className="block list-disc list-inside">
             {bullets.map((text, index) => (
-              <li key={index} className="type-body text-neutral-700">
+              <li key={index} className="type-body text-standard">
                 {text}
               </li>
             ))}

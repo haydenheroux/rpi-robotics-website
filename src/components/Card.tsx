@@ -6,7 +6,7 @@ export interface CardProps {
 
 function Card({ children }: CardProps) {
   return (
-    <div className="p-6 bg-neutral-50 card">
+    <div className="p-6 bg-standard card">
       {children}
     </div>
   );
