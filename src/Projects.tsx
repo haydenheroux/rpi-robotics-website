@@ -40,7 +40,6 @@ function Projects() {
             "Lots of opportunities to learn and experiment",
           ]}
           images={[{ url: "./rai.png" }]}
-          right
         />
         <ProjectCard
           name="Combat Robotics"

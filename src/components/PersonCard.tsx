@@ -43,7 +43,7 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
                 href={`mailto:${email}`}
                 title={`mailto:${email}`}
               >
-                <MdEmail size={24} />
+                <MdEmail size={26} />
               </a>
             )}
             {discord && (
@@ -52,7 +52,7 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
                 title={discord}
                 onClick={() => copy(discord)}
               >
-                <FaDiscord size={24} />
+                <FaDiscord size={26} />
               </a>
             )}
           </div>

@@ -4,13 +4,13 @@ import { MdMenu } from "react-icons/md";
 import { Link } from "react-router";
 import ThemeToggle from "./ThemeToggle";
 
-function DiscordButton() {
+function DiscordButton({ large }: { large?: boolean }) {
   return (
     <a
       href="https://discord.gg/DPWMz5BqZP"
-      className="flex px-4 py-2 justify-center items-center type-large-bold brand-button"
+      className={`flex px-4 py-2 justify-center items-center ${large ? "w-full type-title" : "type-large-bold"} brand-button`}
     >
-      Join on <FaDiscord className="ml-1.5" size={24} />
+      Join on <FaDiscord className="ml-1.5" size={26} />
     </a>
   );
 }
@@ -23,7 +23,7 @@ function Nav() {
   return (
     <>
       <nav
-        className={`w-full min-h-16 py-4 px-8 bg-standard ${!showNav ? "card rounded-[0]" : "relative z-10"}`}
+        className={`fixed z-50 w-full min-h-16 py-4 px-8 bg-standard ${showNav ? "" : "card rounded-[0]"}`}
       >
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
           <Link to="/">
@@ -54,20 +54,20 @@ function Nav() {
         </div>
       </nav>
       {showNav && (
-        <nav className="md:hidden w-full pt-4 pb-8 px-6 bg-standard card rounded-[0]">
-          <div className="flex flex-col gap-4 justify-start items-center">
+        <nav className="fixed z-40 top-16 md:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
+          <div className="flex flex-col gap-6 justify-start items-end">
             {links.map((title) => (
-              <Link to={"/" + title.toLowerCase()}>
-                <span className="type-large text-standard link-hover">
-                  {title}
-                </span>
+              <Link className="w-full" to={"/" + title.toLowerCase()}>
+                <div className="px-4 py-2 bg-standard card text-center link-inset">
+                  <span className="type-title text-standard">{title}</span>
+                </div>
               </Link>
             ))}
-            <DiscordButton />
-            <ThemeToggle />
+            <DiscordButton large />
           </div>
         </nav>
       )}
+      <div className="h-16" />
     </>
   );
 }
