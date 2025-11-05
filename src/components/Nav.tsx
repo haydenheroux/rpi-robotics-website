@@ -9,7 +9,7 @@ function DiscordButton() {
       href="https://discord.gg/DPWMz5BqZP"
       className="flex px-4 py-2 justify-center items-center type-large-bold brand-button"
     >
-      Join on <FaDiscord className="ml-1.5" size={24} />
+      Join on <FaDiscord className="ml-1.5" size={26} />
     </a>
   );
 }

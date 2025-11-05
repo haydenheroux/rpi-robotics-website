@@ -11,7 +11,7 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .type-large {
@@ -19,7 +19,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .type-large-bold {
@@ -27,7 +27,7 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .type-body {
@@ -35,7 +35,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 

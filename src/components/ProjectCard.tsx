@@ -19,7 +19,7 @@ interface InfoRowProps<Type> {
 function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   return items.map((item, index) => (
     <div className="flex flex-row gap-1 items-center">
-      <Icon size={16} className="text-neutral-700" />
+      <Icon size={20} className="text-neutral-700" />
       {link(item) && (
         <a
           className="type-large-bold link-dotted text-neutral-700"
@@ -56,7 +56,7 @@ function ProjectImage({ image: { url, caption } }: { image: Image }) {
 // TODO Make carousel
 function ProjectImages({ images }: { images: Image[] }) {
   return (
-    <div className="flex flex-row gap-6">
+    <div className="mt-2 md:mt-6 flex flex-row gap-6">
       {images.map((image) => (
         <ProjectImage image={image} />
       ))}
@@ -84,60 +84,57 @@ function ProjectCard({
   images,
 }: ProjectCardProps) {
   return (
-    <div className={`flex flex-col gap-8 bg-neutral-50 card p-8`}>
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+    <div className="bg-neutral-50 card p-8">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {(people || times || locations) && (
+          <div className="mb-2">
+            <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
+            {people && (
+              <InfoRow
+                Icon={MdPerson}
+                items={people}
+                text={personText}
+                hover={personHover}
+                link={personLink}
+              />
+            )}
+            {times && (
+              <InfoRow
+                Icon={MdCalendarMonth}
+                items={times}
+                text={meetingTimeText}
+                hover={meetingTimeHover}
+                link={() => ""}
+              />
+            )}
+            {locations && (
+              <InfoRow
+                Icon={MdLocationCity}
+                items={locations}
+                text={locationText}
+                hover={locationHover}
+                link={locationLink}
+              />
+            )}
+          </div>
+        )}
         <div>
-          <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
-          {(people || times || locations) && (
-            <div className="mb-2">
-              {people && (
-                <InfoRow
-                  Icon={MdPerson}
-                  items={people}
-                  text={personText}
-                  hover={personHover}
-                  link={personLink}
-                />
-              )}
-              {times && (
-                <InfoRow
-                  Icon={MdCalendarMonth}
-                  items={times}
-                  text={meetingTimeText}
-                  hover={meetingTimeHover}
-                  link={() => ""}
-                />
-              )}
-              {locations && (
-                <InfoRow
-                  Icon={MdLocationCity}
-                  items={locations}
-                  text={locationText}
-                  hover={locationHover}
-                  link={locationLink}
-                />
-              )}
-            </div>
-          )}
-        </div>
-        {paragraphs && (
-          <div>
-            {paragraphs.map((text, index) => (
+          {paragraphs &&
+            paragraphs.map((text, index) => (
               <p key={index} className="mb-1 type-body text-neutral-700">
                 {text}
               </p>
             ))}
-          </div>
-        )}
-        {bullets && (
-          <ul className="block list-disc list-inside">
-            {bullets.map((text, index) => (
-              <li key={index} className="type-body text-neutral-700">
-                {text}
-              </li>
-            ))}
-          </ul>
-        )}
+          {bullets && (
+            <ul className="block list-disc list-inside">
+              {bullets.map((text, index) => (
+                <li key={index} className="type-body text-neutral-700">
+                  {text}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
       {images && <ProjectImages images={images} />}
     </div>
