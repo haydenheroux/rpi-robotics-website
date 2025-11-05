@@ -4,8 +4,8 @@ import { JEC_3210, LOW_8214 } from "./types/Location";
 function Projects() {
   return (
     <>
-      <h1 className="type-title text-neutral-700">Projects</h1>
-      <p className="type-body text-neutral-700">
+      <h1 className="type-title text-standard">Projects</h1>
+      <p className="type-body text-standard">
         Our club is structured into teams, each working on an ongoing project.
         Within each team, feel free to join a specific sub-team, such as
         mechanical, programming, electrical, or marketing!

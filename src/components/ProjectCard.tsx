@@ -19,10 +19,10 @@ interface InfoRowProps<Type> {
 function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   return items.map((item, index) => (
     <div className="flex flex-row gap-1 items-center">
-      <Icon size={20} className="text-neutral-700" />
+      <Icon size={20} className="text-standard" />
       {link(item) && (
         <a
-          className="type-large-bold link-dotted text-neutral-700"
+          className="type-large-bold link-dotted text-standard"
           title={hover(item)}
           href={link(item)}
         >
@@ -33,7 +33,7 @@ function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
         <span
           key={index}
           title={hover(item)}
-          className="type-large-bold link-dotted text-neutral-700"
+          className="type-large-bold link-dotted text-standard"
         >
           {text(item)}
         </span>
@@ -46,9 +46,7 @@ function ProjectImage({ image: { url, caption } }: { image: Image }) {
   return (
     <div className="flex flex-col gap-2">
       <img key={url} src={url} className="card" />
-      {caption && (
-        <p className="text-center text-neutral-700 type-body">{caption}</p>
-      )}
+      {caption && <p className="text-center text-standard type-body">{caption}</p>}
     </div>
   );
 }
@@ -84,11 +82,11 @@ function ProjectCard({
   images,
 }: ProjectCardProps) {
   return (
-    <div className="bg-neutral-50 card p-8">
+    <div className="bg-standard card p-8">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {(people || times || locations) && (
           <div className="mb-2">
-            <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
+            <h2 className="type-title text-standard mb-0.5">{name}</h2>
             {people && (
               <InfoRow
                 Icon={MdPerson}
@@ -118,23 +116,24 @@ function ProjectCard({
             )}
           </div>
         )}
-        <div>
-          {paragraphs &&
-            paragraphs.map((text, index) => (
-              <p key={index} className="mb-1 type-body text-neutral-700">
+        {paragraphs && (
+          <div>
+            {paragraphs.map((text, index) => (
+              <p key={index} className="mb-1 type-body text-standard">
                 {text}
               </p>
             ))}
-          {bullets && (
-            <ul className="block list-disc list-inside">
-              {bullets.map((text, index) => (
-                <li key={index} className="type-body text-neutral-700">
-                  {text}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+          </div>
+        )}
+        {bullets && (
+          <ul className="block list-disc list-inside">
+            {bullets.map((text, index) => (
+              <li key={index} className="type-body text-standard">
+                {text}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       {images && <ProjectImages images={images} />}
     </div>

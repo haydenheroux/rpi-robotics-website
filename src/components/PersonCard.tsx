@@ -18,17 +18,17 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
       <Card>
         <div className="flex flex-col gap-4">
           <div className="w-48 h-48 flex items-center justify-center mx-auto card">
-            <MdPerson size={192} className="text-neutral-700" />
+            <MdPerson size={192} className="text-standard" />
           </div>
           <div className="mx-auto text-center">
-            <h2 className="type-title text-neutral-700 mb-1">{name}</h2>
+            <h2 className="type-title text-standard mb-1">{name}</h2>
             {position && (
-              <p className="type-large text-neutral-700">
+              <p className="type-large text-standard">
                 <span className="type-large-bold">Position:</span> {position}
               </p>
             )}
             {projects && (
-              <p className="type-large text-neutral-700">
+              <p className="type-large text-standard">
                 <span className="type-large-bold">
                   {projects.length > 1 ? "Projects" : "Project"}:
                 </span>{" "}
@@ -39,7 +39,7 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
           <div className="mx-auto flex gap-1">
             {email && (
               <a
-                className="link-hover p-0.5 text-neutral-700"
+                className="link-hover p-0.5 text-standard"
                 href={`mailto:${email}`}
                 title={`mailto:${email}`}
               >
@@ -48,7 +48,7 @@ function PersonCard({ name, email, discord, position, projects }: Person) {
             )}
             {discord && (
               <a
-                className="link-hover p-0.5 text-neutral-700"
+                className="link-hover p-0.5 text-standard"
                 title={discord}
                 onClick={() => copy(discord)}
               >
