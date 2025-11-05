@@ -43,7 +43,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-50;
+    @apply bg-neutral-50 dark:bg-neutral-900;
   }
 }
 
@@ -77,12 +77,16 @@
   }
 
   .link-inset:active {
-    @apply scale-100 inset-shadow-sm inset-shadow-neutral-300;
+    @apply scale-100 inset-shadow-sm inset-shadow-neutral-300 dark:inset-shadow-neutral-800;
   }
 
   .link-hover::before {
     content: "";
-    @apply w-full h-full scale-100 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-neutral-200 dark:bg-neutral-700 -z-10 opacity-0 transition-all duration-150 ease-in-out;
+    @apply w-full h-full scale-100 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-neutral-200 -z-10 opacity-0 transition-all duration-150 ease-in-out;
+  }
+
+  .dark .link-hover::before {
+    @apply bg-neutral-700;
   }
 
   .link-hover {
@@ -95,6 +99,10 @@
 
   .link-hover:active::before {
     @apply scale-125 inset-shadow-sm inset-shadow-neutral-300 dark:inset-shadow-neutral-800;
+  }
+
+  .dark .link-hover:active::before {
+    @apply inset-shadow-neutral-800;
   }
 
   .link-dotted {

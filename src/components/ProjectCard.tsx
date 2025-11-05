@@ -86,7 +86,7 @@ function ProjectCard({
       <div className="grid grid-cols-1 md:grid-cols-2">
         {(people || times || locations) && (
           <div className="mb-2">
-            <h2 className="type-title text-neutral-700 mb-0.5">{name}</h2>
+            <h2 className="type-title text-standard mb-0.5">{name}</h2>
             {people && (
               <InfoRow
                 Icon={MdPerson}
