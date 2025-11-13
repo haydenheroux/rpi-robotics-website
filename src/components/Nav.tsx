@@ -67,7 +67,7 @@ function Nav() {
           </div>
         </nav>
       )}
-      <div className="h-16" />
+      <div className="h-32" />
     </>
   );
 }
