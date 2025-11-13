@@ -1,7 +1,13 @@
 import Carousel from "./components/Carousel";
 
 function Home() {
-  return <Carousel images={Array.from({ length: 10 }, () => `https://picsum.photos/800/1280?random=${Math.random()}`)} />
+  return <Carousel images={[
+    "poster_igvc.png",
+    "poster_gbm.png",
+    "poster_paper_club.png",
+    "poster_sept_gbm.png",
+    "poster_sept_gbm_2.png",
+  ]} />
 }
 
 export default Home;

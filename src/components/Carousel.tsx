@@ -35,12 +35,12 @@ function Carousel({ images }: { images: string[] }) {
       >
         <div
           ref={carouselRef}
-          className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide rounded-2xl"
+          className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
         >
           {images.map((image, i) => (
             <div key={i} className="flex-shrink-0 w-1/3 snap-center px-1">
-              <div className="aspect-[5/8] w-full overflow-hidden">
-                <img src={image} className="w-full h-full object-cover card" />
+              <div className="aspect-[6/8] overflow-hidden">
+                <img src={image} className="w-full h-full object-contain object-center" />
               </div>
             </div>
           ))}
