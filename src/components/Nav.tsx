@@ -33,7 +33,7 @@ function Nav() {
           </Link>
           <div className="hidden md:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             {links.map((title) => (
-              <Link to={"/" + title.toLowerCase()}>
+              <Link key={title} to={"/" + title.toLowerCase()}>
                 <span className="type-large text-standard link-hover">
                   {title}
                 </span>
@@ -57,7 +57,7 @@ function Nav() {
         <nav className="fixed z-40 top-16 md:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
           <div className="flex flex-col gap-6 justify-start items-end">
             {links.map((title) => (
-              <Link className="w-full" to={"/" + title.toLowerCase()}>
+              <Link key={title} className="w-full" to={"/" + title.toLowerCase()}>
                 <div className="px-4 py-2 bg-standard card text-center link-inset">
                   <span className="type-title text-standard">{title}</span>
                 </div>

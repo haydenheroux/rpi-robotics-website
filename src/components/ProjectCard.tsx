@@ -18,7 +18,7 @@ interface InfoRowProps<Type> {
 
 function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   return items.map((item, index) => (
-    <div className="flex flex-row gap-1 items-center">
+    <div key={index} className="flex flex-row gap-1 items-center">
       <Icon size={20} className="text-standard" />
       {link(item) && (
         <a
@@ -56,7 +56,7 @@ function ProjectImages({ images }: { images: Image[] }) {
   return (
     <div className="mt-2 md:mt-6 flex flex-row gap-6">
       {images.map((image) => (
-        <ProjectImage image={image} />
+        <ProjectImage key={image.url} image={image} />
       ))}
     </div>
   );
