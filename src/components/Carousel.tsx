@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import type Image from "../types/Image";
 
-function Carousel({ images }: { images: string[] }) {
+function Carousel({ images }: { images?: Image[] }) {
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -26,6 +27,10 @@ function Carousel({ images }: { images: string[] }) {
     return () => clearInterval(interval);
   }, [isPaused]);
 
+  if (!images) {
+    return null;
+  }
+
   return (
     <>
       <div
@@ -40,7 +45,10 @@ function Carousel({ images }: { images: string[] }) {
           {images.map((image, i) => (
             <div key={i} className="flex-shrink-0 w-1/3 snap-center px-1">
               <div className="aspect-[6/8] overflow-hidden">
-                <img src={image} className="w-full h-full object-contain object-center" />
+                <img
+                  src={image.url}
+                  className="w-full h-full object-contain object-center"
+                />
               </div>
             </div>
           ))}

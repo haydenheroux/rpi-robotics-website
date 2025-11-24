@@ -1,13 +1,10 @@
 import Carousel from "./components/Carousel";
+import { useContent } from "./contexts/ContentContext";
 
 function Home() {
-  return <Carousel images={[
-    "poster_igvc.png",
-    "poster_gbm.png",
-    "poster_paper_club.png",
-    "poster_sept_gbm.png",
-    "poster_sept_gbm_2.png",
-  ]} />
+  const { content } = useContent();
+
+  return <Carousel images={content.posters} />
 }
 
 export default Home;

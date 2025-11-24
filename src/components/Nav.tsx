@@ -3,11 +3,14 @@ import { FaDiscord } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-router";
 import ThemeToggle from "./ThemeToggle";
+import { useContent } from "../contexts/ContentContext";
 
 function DiscordButton({ large }: { large?: boolean }) {
+  const { content } = useContent();
+
   return (
     <a
-      href="https://discord.gg/DPWMz5BqZP"
+      href={content.discord}
       className={`flex px-4 py-2 justify-center items-center ${large ? "w-full type-title" : "type-large-bold"} brand-button`}
     >
       Join on <FaDiscord className="ml-1.5" size={26} />
