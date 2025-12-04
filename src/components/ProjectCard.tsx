@@ -19,7 +19,7 @@ interface InfoRowProps<Type> {
 
 function InfoRow<Type>({ Icon, items, text, hover, link }: InfoRowProps<Type>) {
   return items.map((item, index) => (
-    <div key={index} className="flex flex-row gap-1 items-center">
+    <div key={index} className="flex flex-row gap-2 items-center">
       <Icon size={20} className="text-standard" />
       {link(item) && (
         <a
@@ -72,7 +72,7 @@ function ProjectInfo({
 }) {
   return (
     <div>
-      <h2 className="type-title text-standard mb-0.5">{name}</h2>
+      <h2 className="type-title text-standard">{name}</h2>
       {people && (
         <InfoRow
           Icon={MdPerson}
@@ -144,7 +144,7 @@ function ProjectCard({
 }: Project) {
   return (
     <div className="bg-standard card p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProjectInfo
           name={name}
           people={people}
