@@ -47,10 +47,11 @@ function Nav() {
             <DiscordButton />
             <ThemeToggle />
           </div>
-          <div className="lg:hidden link-hover">
+          <div className="flex lg:hidden gap-4 items-center justify-center">
+            <ThemeToggle small />
             <MdMenu
               size={24}
-              className="text-standard"
+              className="bg-standard text-standard link-hover"
               onClick={() => setShowNav(!showNav)}
             />
           </div>

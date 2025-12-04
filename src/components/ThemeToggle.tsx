@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa6";
 
-function ThemeToggle() {
+function ThemeToggle({ small = false }: { small?: boolean }) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
 
     if (stored === "dark") {
       setIsDark(true);
@@ -34,13 +36,15 @@ function ThemeToggle() {
     });
   };
 
+  const size = small ? 18 : 24;
+
   // TODO Use utility classes to define link behavior
   return (
     <button
       onClick={toggleTheme}
-      className="p-4 rounded-2xl bg-standard text-standard"
+      className={`${small ? "" : "p-4"} rounded-2xl bg-standard text-standard link-hover`}
     >
-      {isDark ? <FaMoon size={24} /> : <FaSun size={24} />}
+      {isDark ? <FaMoon size={size} /> : <FaSun size={size} />}
     </button>
   );
 }
