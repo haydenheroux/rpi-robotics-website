@@ -9,9 +9,8 @@
 
 @layer utility {
   .type-title {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
     font-style: normal;
     font-size: 26px;
     margin-bottom: 4px;
@@ -22,6 +21,8 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     font-size: 20px;
   }
 
