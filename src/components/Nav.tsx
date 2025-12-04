@@ -34,7 +34,7 @@ function Nav() {
               RPI Robotics
             </span>
           </Link>
-          <div className="hidden md:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
+          <div className="hidden lg:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             {links.map((title) => (
               <Link key={title} to={"/" + title.toLowerCase()}>
                 <span className="type-large text-standard link-hover">
@@ -43,11 +43,11 @@ function Nav() {
               </Link>
             ))}
           </div>
-          <div className="hidden md:flex gap-4 items-center justify-center">
+          <div className="hidden lg:flex gap-4 items-center justify-center">
             <DiscordButton />
             <ThemeToggle />
           </div>
-          <div className="md:hidden link-hover">
+          <div className="lg:hidden link-hover">
             <MdMenu
               size={24}
               className="text-standard"
@@ -57,7 +57,7 @@ function Nav() {
         </div>
       </nav>
       {showNav && (
-        <nav className="fixed z-40 top-16 md:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
+        <nav className="fixed z-40 top-16 lg:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
           <div className="flex flex-col gap-6 justify-start items-end">
             {links.map((title) => (
               <Link key={title} className="w-full" to={"/" + title.toLowerCase()}>
