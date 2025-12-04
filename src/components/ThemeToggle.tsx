@@ -38,11 +38,10 @@ function ThemeToggle({ small = false }: { small?: boolean }) {
 
   const size = small ? 18 : 24;
 
-  // TODO Use utility classes to define link behavior
   return (
     <button
       onClick={toggleTheme}
-      className={`${small ? "" : "p-4"} rounded-2xl bg-standard text-standard link-hover`}
+      className={`${small ? "" : "p-4"} rounded-2xl bg-standard text-standard lg:link-hover`}
     >
       {isDark ? <FaMoon size={size} /> : <FaSun size={size} />}
     </button>

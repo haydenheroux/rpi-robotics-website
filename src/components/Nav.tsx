@@ -51,7 +51,7 @@ function Nav() {
             <ThemeToggle small />
             <MdMenu
               size={24}
-              className="bg-standard text-standard link-hover"
+              className="bg-standard text-standard"
               onClick={() => setShowNav(!showNav)}
             />
           </div>
