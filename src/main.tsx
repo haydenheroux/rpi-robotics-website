@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import Projects from "./Projects";
 import Home from "./Home";
 import Layout from "./Layout";
@@ -14,7 +14,7 @@ import { ContentProvider } from "./contexts/ContentContext";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ContentProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<HomeLayout />}>
             <Route index element={<Home />} />
@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ContentProvider>
   </StrictMode>,
 );
