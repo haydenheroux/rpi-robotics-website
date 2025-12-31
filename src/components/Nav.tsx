@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaDiscord } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
+import { Link } from "react-router";
 import ThemeToggle from "./ThemeToggle";
 import { useContent } from "../contexts/ContentContext";
 
@@ -28,18 +29,18 @@ function Nav() {
         className={`fixed z-50 w-full min-h-16 py-4 px-8 bg-standard ${showNav ? "" : "card rounded-[0]"}`}
       >
         <div className="w-full lg:w-4xl lg:mx-auto flex flex-row gap-8 justify-between items-center">
-          <a href="/">
+          <Link to="/">
             <span className="block min-w-48 type-title text-standard link-hover">
               RPI Robotics
             </span>
-          </a>
+          </Link>
           <div className="hidden lg:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             {links.map((title) => (
-              <a key={title} href={"/" + title.toLowerCase()}>
+              <Link key={title} to={"/" + title.toLowerCase()}>
                 <span className="type-large text-standard link-hover">
                   {title}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex gap-4 items-center justify-center">
@@ -60,11 +61,11 @@ function Nav() {
         <nav className="fixed z-40 top-16 lg:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
           <div className="flex flex-col gap-6 justify-start items-end">
             {links.map((title) => (
-              <a key={title} className="w-full" href={"/" + title.toLowerCase()}>
+              <Link key={title} className="w-full" to={"/" + title.toLowerCase()}>
                 <div className="px-4 py-2 text-center">
                   <span className="type-title text-standard link-hover">{title}</span>
                 </div>
-              </a>
+              </Link>
             ))}
             <DiscordButton large />
           </div>
