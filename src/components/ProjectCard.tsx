@@ -115,7 +115,7 @@ function ProjectDescription({
     <div>
       {paragraphs &&
         paragraphs.map((text, index) => (
-          <p key={index} className="mb-1.5 type-body text-standard">
+          <p key={index} className="mb-2 type-body text-standard">
             {text}
           </p>
         ))}
@@ -123,7 +123,7 @@ function ProjectDescription({
       {bullets && (
         <ul className="block list-disc list-inside">
           {bullets.map((text, index) => (
-            <li key={index} className="type-body text-standard mb-1.5">
+            <li key={index} className="mb-2 type-body text-standard">
               {text}
             </li>
           ))}

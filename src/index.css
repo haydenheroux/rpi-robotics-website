@@ -16,6 +16,14 @@
     margin-bottom: 4px;
   }
 
+  .type-title-small {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
   .type-large {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;

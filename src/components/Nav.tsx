@@ -11,9 +11,9 @@ function DiscordButton({ large }: { large?: boolean }) {
   return (
     <a
       href={content.discord}
-      className={`flex px-4 py-2 justify-center items-center ${large ? "w-full type-title" : "w-36 type-large-bold"} brand-button`}
+      className={`flex px-4 py-2 justify-center items-center ${large ? "w-full type-title" : "w-42 type-title-small"} brand-button`}
     >
-      Join on <FaDiscord className={large ? "ml-4" : "ml-2"} size={32} />
+      Join on <FaDiscord className="ml-4" size={32} />
     </a>
   );
 }
@@ -37,7 +37,7 @@ function Nav() {
           <div className="hidden lg:flex px-2 text-ellipsis flex-row gap-8 justify-start items-center">
             {links.map((title) => (
               <Link key={title} to={"/" + title.toLowerCase()}>
-                <span className="type-large text-standard link-hover">
+                <span className="type-title-small text-standard link-hover">
                   {title}
                 </span>
               </Link>
