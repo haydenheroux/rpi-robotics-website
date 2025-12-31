@@ -1,12 +1,11 @@
-import ProjectCard from "../components/ProjectCard";
-import { useContent } from "../contexts/ContentContext";
-import Layout from "../layouts/Layout";
+import ProjectCard from "./components/ProjectCard";
+import { useContent } from "./contexts/ContentContext";
 
-function Page() {
+function Projects() {
   const { content } = useContent();
 
   return (
-    <Layout>
+    <>
       <h1 className="type-title text-standard">Projects</h1>
       <p className="type-body text-standard">
         Our club is structured into teams, each working on an ongoing project.
@@ -28,11 +27,8 @@ function Page() {
           />
         ))}
       </div>
-    </Layout>
+    </>
   );
 }
 
-export default {
-  Page,
-  route: "/projects",
-};
+export default Projects;

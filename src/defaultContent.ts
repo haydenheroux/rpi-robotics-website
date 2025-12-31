@@ -66,7 +66,7 @@ export const defaultContent: Content = {
         "A project with the synergy between art and mechatronics at its core",
         "Lots of opportunities to learn and experiment",
       ],
-      images: [{ url: "/rai.png" }],
+      images: [{ url: "rai.png" }],
     },
     {
       name: "Combat Robotics",
@@ -114,8 +114,8 @@ export const defaultContent: Content = {
         "The audio-animatronic project's goal is to complete a functioning audio-animatronic figure while allowing its members to have a judge-free environment to learn introductory robotics technology. To create an animatronic, it requires the sub-teams of concept design, mechanical, electrical, and programming. The concept design team is in charge of creating multiple concept sketches of the design, color scheme, and persona the animatronic will portray. The mechanical team's job is to design links and mechanisms to integrate motors into an assembly emulating the animatronics' motion. The electrical team creates a functioning circuit integrating each electrical component required for this project (SG90 motors, UNO R3, PCA9685 board, sound module, etc.). Lastly, the programming team decides on a method to program the motors to be synched with the audio-animatronics' audio, making our figure's motion lifelike.",
       ],
       images: [
-        { url: "/aa_concept_1.png", caption: "By Jasmin Chen" },
-        { url: "/aa_concept_2.jpg", caption: "By Aarushi Kumar" },
+        { url: "aa_concept_1.png", caption: "By Jasmin Chen" },
+        { url: "aa_concept_2.jpg", caption: "By Aarushi Kumar" },
       ],
     },
   ],
@@ -149,11 +149,11 @@ export const defaultContent: Content = {
     { name: "Tag Ciccone", position: "Team Lead", projects: ["Couch Bot"] },
   ],
   posters: [
-    { url: "/poster_igvc.png" },
-    { url: "/poster_gbm.png" },
-    { url: "/poster_paper_club.png" },
-    { url: "/poster_sept_gbm.png" },
-    { url: "/poster_sept_gbm_2.png" },
+    { url: "poster_igvc.png" },
+    { url: "poster_gbm.png" },
+    { url: "poster_paper_club.png" },
+    { url: "poster_sept_gbm.png" },
+    { url: "poster_sept_gbm_2.png" },
   ],
 };
 
