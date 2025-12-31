@@ -21,7 +21,7 @@ function DiscordButton({ large }: { large?: boolean }) {
 function Nav() {
   const [showNav, setShowNav] = useState<boolean>(false);
 
-  const links = ["Projects", "Leadership", "Calendar", "Contact"];
+  const links = ["Projects", "Leadership", "Calendar"];
 
   return (
     <>
@@ -61,9 +61,15 @@ function Nav() {
         <nav className="fixed z-40 top-16 lg:hidden w-full pt-4 pb-8 px-10 bg-standard card rounded-[0]">
           <div className="flex flex-col gap-6 justify-start items-end">
             {links.map((title) => (
-              <Link key={title} className="w-full" to={"/" + title.toLowerCase()}>
+              <Link
+                key={title}
+                className="w-full"
+                to={"/" + title.toLowerCase()}
+              >
                 <div className="px-4 py-2 text-center">
-                  <span className="type-title text-standard link-hover">{title}</span>
+                  <span className="type-title text-standard link-hover">
+                    {title}
+                  </span>
                 </div>
               </Link>
             ))}
