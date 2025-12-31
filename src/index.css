@@ -125,7 +125,7 @@
   }
 
   .link-dotted {
-    @apply underline underline-offset-[1.5px] decoration-dotted decoration-1 decoration-neutral-700 dark:decoration-neutral-200 cursor-pointer;
+    @apply underline underline-offset-[3px] decoration-dotted decoration-1 decoration-neutral-700 dark:decoration-neutral-200 cursor-pointer;
   }
 
   .link-dotted:hover {
