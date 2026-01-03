@@ -1,5 +1,5 @@
 import type Content from "./types/Content";
-import { LOW_8214, JEC_3210 } from "./types/Location";
+import { LOW_8214, JEC_3210, LOW_4040 } from "./types/Location";
 
 export const defaultContent: Content = {
   discord: "https://discord.gg/DPWMz5BqZP",
@@ -77,6 +77,7 @@ export const defaultContent: Content = {
         "Eight student sub-teams design and build a one-pound combat robot",
         "Host end-of-semester tournament where teams compete with their robot",
       ],
+      images: [{ url: "combat_image_1.png" }, { url: "combat_image_2.png" }],
     },
     {
       name: "Drone Project",
@@ -109,7 +110,7 @@ export const defaultContent: Content = {
       name: "Audio-Animatronic",
       people: [{ name: "Sydney Simmons", email: "simmos6@rpi.edu" }],
       times: [{ day: "Sunday", start: "4:00pm", end: "6:00pm" }],
-      locations: [JEC_3210],
+      locations: [LOW_4040],
       paragraphs: [
         "The audio-animatronic project's goal is to complete a functioning audio-animatronic figure while allowing its members to have a judge-free environment to learn introductory robotics technology. To create an animatronic, it requires the sub-teams of concept design, mechanical, electrical, and programming. The concept design team is in charge of creating multiple concept sketches of the design, color scheme, and persona the animatronic will portray. The mechanical team's job is to design links and mechanisms to integrate motors into an assembly emulating the animatronics' motion. The electrical team creates a functioning circuit integrating each electrical component required for this project (SG90 motors, UNO R3, PCA9685 board, sound module, etc.). Lastly, the programming team decides on a method to program the motors to be synched with the audio-animatronics' audio, making our figure's motion lifelike.",
       ],
@@ -135,18 +136,38 @@ export const defaultContent: Content = {
     {
       name: "Jerry Norton",
       position: "Vice President of Outreach",
-      projects: ["IGVC"],
+      projects: ["IGVC", "Robotic Art Installation"],
     },
     {
       name: "Ainsley Cunningham",
       position: "Secretary",
-      projects: ["Audio-Animatronic"],
+      projects: ["Audio-Animatronic", "Paper Club"],
     },
-    { name: "Aidan Zitron", position: "Safety Officer" },
-    { name: "Bonden Tucker", position: "Procurement Officer" },
-    { name: "Tag Ciccone", position: "Facilities Manager" },
-    { name: "Sara Lawrence", position: "Marketing Lead" },
-    { name: "Aarushi Kumar", position: "Partnership Coordinator" },
+    {
+      name: "Aidan Zitron",
+      position: "Safety Officer",
+      projects: ["Couch Bot"],
+    },
+    {
+      name: "Bonden Tucker",
+      position: "Procurement Officer",
+      projects: ["IGVC"],
+    },
+    {
+      name: "Tag Ciccone",
+      position: "Facilities Manager",
+      projects: ["Couch Bot", "IGVC"],
+    },
+    {
+      name: "Sara Lawrence",
+      position: "Marketing Lead",
+      projects: ["Combat Robotics", "Drone Project"],
+    },
+    {
+      name: "Aarushi Kumar",
+      position: "Partnership Coordinator",
+      projects: ["Combat Robotics", "IGVC", "Audio-Animatronic"],
+    },
     { name: "Tag Ciccone", position: "Team Lead", projects: ["Couch Bot"] },
     {
       name: "Kateri Ngo",

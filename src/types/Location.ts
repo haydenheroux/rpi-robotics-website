@@ -27,6 +27,8 @@ export const LOW = (room: string) => ({
 
 export const LOW_8214: Location = LOW("8214");
 
+export const LOW_4040: Location = LOW("4040");
+
 export const JEC = (room: string) => ({
   building: {
     name: "Jonsson Engineering Center",
