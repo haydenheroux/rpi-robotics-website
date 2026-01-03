@@ -150,7 +150,7 @@ export const defaultContent: Content = {
     },
     {
       name: "Bonden Tucker",
-      position: "Procurement Officer",
+      position: "Procurement Manager",
       projects: ["IGVC"],
     },
     {
