@@ -154,7 +154,7 @@ export const defaultContent: Content = {
       projects: ["Paper Club"],
     },
     {
-      name: "Andeas Spiratos",
+      name: "Andreas Spiratos",
       position: "Team Lead",
       projects: ["Combat Robotics"],
     },
